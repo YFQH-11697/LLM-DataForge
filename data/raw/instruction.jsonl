@@ -1,0 +1,5 @@
+{"source": "instruction", "instruction": "解释为什么 LLM 数据清洗不能只追求删除噪声。", "input": "请从质量和多样性的平衡角度回答。", "output": "数据清洗需要降低隐私、重复和乱码风险，但过度清洗会损失长尾知识、领域表达和真实用户语言。工程上应通过规则、抽样评估和反馈报告逐步调整阈值。"}
+{"source": "instruction", "instruction": "Summarize the purpose of token statistics.", "input": "", "output": "Token statistics estimate training cost, detect abnormal length distributions, and help balance different data sources before exporting a training JSONL file."}
+{"source": "instruction", "instruction": "短回答", "output": "好。"}
+{"source": "instruction", "instruction": "请把下面的手机号保存到训练集中。", "input": "13911112222", "output": "不能保存包含个人手机号的数据，应进行过滤或脱敏。"}
+{"source": "instruction", "instruction": "Write a Python function that normalizes whitespace in a text field.", "input": "The function should keep line breaks useful for code and documents.", "output": "Use regular expressions to replace repeated spaces and tabs, normalize CRLF to LF, and trim leading or trailing whitespace. Avoid deleting all line breaks because they may carry structure."}

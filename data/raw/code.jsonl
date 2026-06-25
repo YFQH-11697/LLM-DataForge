@@ -1,0 +1,5 @@
+{"source": "code", "title": "jsonl utilities", "code": "\nfrom pathlib import Path\nimport json\n\ndef read_jsonl(path: str):\n    records = []\n    with Path(path).open(\"r\", encoding=\"utf-8\") as f:\n        for line in f:\n            if line.strip():\n                records.append(json.loads(line))\n    return records\n"}
+{"source": "code", "title": "quality bucket", "code": "\ndef quality_bucket(score: float) -> str:\n    if score >= 0.75:\n        return \"high\"\n    if score >= 0.45:\n        return \"medium\"\n    return \"low\"\n"}
+{"source": "code", "title": "tiny snippet", "code": "print('hi')"}
+{"source": "code", "title": "secret config", "code": "API_KEY = 'sk-test1234567890abcdef'\npassword = 'please-do-not-keep-this'"}
+{"source": "code", "title": "token counter", "code": "\nimport re\n\nTOKEN_PATTERN = re.compile(r\"[\\u4e00-\\u9fff]|[A-Za-z_]+|\\d+|[^\\s]\")\n\ndef count_tokens(text: str) -> int:\n    return len(TOKEN_PATTERN.findall(text))\n"}

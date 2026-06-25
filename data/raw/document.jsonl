@@ -1,0 +1,6 @@
+{"source": "document", "title": "Data Quality Notes", "content": "预训练语料的数据质量会影响模型的知识覆盖、重复记忆和安全风险。一个可复现的数据构建流程通常包含输入清单、清洗规则、去重签名、token 级统计、抽样策略和可审计报告。"}
+{"source": "document", "title": "empty note", "content": "     "}
+{"source": "document", "title": "Repeated characters", "content": "这是一段坏样本 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈 这种连续重复字符通常说明采集或编码异常。"}
+{"source": "document", "title": "Experiment Log", "content": "In a model data experiment, the team compared a baseline corpus with a filtered corpus. The filtered version removed exact duplicates and obvious private identifiers, then sampled web, documents, code, and instruction data with controlled ratios for a small training run."}
+{"source": "document", "title": "Near Duplicate A", "content": "数据质量报告应该记录输入数量、过滤原因、重复率、token 总量、来源占比和样本案例。这些指标帮助工程师判断数据是否适合进入训练阶段。"}
+{"source": "document", "title": "Near Duplicate B", "content": "数据质量报告需要记录输入数量、过滤原因、重复比例、token 总量、来源占比以及样本案例。这些指标可以帮助工程师判断数据是否适合进入训练阶段。"}

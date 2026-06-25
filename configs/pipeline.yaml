@@ -1,0 +1,37 @@
+project:
+  name: "LLM-DataForge"
+  version: "clean_v1"
+
+paths:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "outputs/processed"
+  report_dir: "outputs/reports"
+
+cleaning:
+  min_chars: 50
+  max_chars: 200000
+  max_urls: 10
+  repeated_char_threshold: 20
+  enable_pii_filter: true
+
+dedup:
+  exact: true
+  approximate: true
+  approximate_threshold: 0.85
+  ngram_size: 5
+
+tokenizer:
+  use_hf_tokenizer: false
+  model_name: "Qwen/Qwen2.5-0.5B"
+
+quality:
+  min_score: 0.45
+
+sampling:
+  max_records: 1000
+  source_ratios:
+    web: 0.35
+    document: 0.25
+    code: 0.20
+    instruction: 0.20
