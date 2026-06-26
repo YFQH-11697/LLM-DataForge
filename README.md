@@ -180,11 +180,6 @@ python -m llm_dataforge.cli report --input outputs/processed/train.jsonl --outpu
 - `report.py`：生成 Markdown、JSON、CSV 和可选图表
 - `cli.py`：命令行入口和 pipeline 编排
 
-## 面试讲解版项目介绍
-
-LLM-DataForge 是我为了补齐 LLM 数据工程经验做的一个轻量级数据质量流水线项目。它模拟预训练和后训练数据进入训练前的关键处理流程：先把网页、文档、代码和指令数据统一成 JSONL schema，再做解析、文本标准化、隐私信息过滤、精确和近似去重，然后统计 token、计算规则版质量分、按来源配比采样，最后导出 `train.jsonl` 并生成数据质量报告。
-
-这个项目的重点不是模型调用，而是展示我对 LLM 数据层的理解：训练数据的质量、重复率、隐私风险、token 分布和采样比例都会影响模型效果与成本。项目规模是教学和面试级别，但模块边界按可扩展方向设计，可以替换为 Spark/Ray、Parquet、MinHash/LSH、真实 tokenizer、质量分类器和训练反馈闭环。
 
 ## 局限性
 
